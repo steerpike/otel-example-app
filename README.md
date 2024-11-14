@@ -49,7 +49,7 @@ npx ts-node --require ./instrumentation.ts app.ts
 Open a terminal and attach to the `otel-tui` container to view the telemetry data:
 `docker attach otel-tui`
 Visit `http://localhost:8080/rolldice` in your browser.
-You should see traces, logs, and metrics emitted by your Node.js application in the command-line viewer.
+You should see traces emitted by your Node.js application in the command-line viewer.
 
 ## Explanation of Key Files
 `instrumentation.ts`
