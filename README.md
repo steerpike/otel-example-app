@@ -1,7 +1,7 @@
 # Basic observability app
 
 ## Overview
-This repository showcases a very basic Node.js application that has been auto-instrumented with the OpenTelemetry SDK. It includes a Docker Compose setup that defines a basic OpenTelemetry Collector and a command-line tool `(otel-tui)` for viewing emitted telemetry. The purpose of this setup is to provide developers with a clear pathway to integrating observability into their development lifecycle, allowing them to see traces, logs, and metrics directly from their locally developed apps in a command-line viewer.
+This repository showcases a very basic Node.js application that has been auto-instrumented with the OpenTelemetry SDK. It includes a Docker Compose setup that defines a basic OpenTelemetry Collector and a command-line tool `(otel-tui)` for viewing emitted telemetry. The purpose of this setup is to provide developers with a clear pathway to integrating observability into their development lifecycle, allowing them to see traces directly from their locally developed apps in a command-line viewer (logs and metrics to be added in the future).
 
 ## Features
 * Auto-instrumented Node.js application using OpenTelemetry SDK.
