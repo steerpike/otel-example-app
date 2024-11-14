@@ -22,17 +22,22 @@ git clone <repository-url>
 cd <repository-directory>
 ```
 2. Configure Environment Variables
+
 Create a `.env` file in the root of the project and add the following environment variables:
 ```
 OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318/v1/traces
 SERVICE_NAME=my-service-name
 ```
 Replace my-service-name with the actual name of your service.
+
 3. Build and Run the Docker Containers
+
 Use Docker Compose to build and run the containers:
 `docker-compose up -d`
 This will start the OpenTelemetry Collector and the `otel-tui` command-line tool.
+
 4. Run the Node.js Application
+
 The node application is *not* included in the docker-compose config specifically to mirror the more consistent pattern within Nine's development teams of running node applications directly rather than within docker configurations.
 Install the dependencies and start the Node.js application:
 ```
@@ -40,6 +45,7 @@ npm install
 npx ts-node --require ./instrumentation.ts app.ts
 ```
 5. View Telemetry Data
+
 Open a terminal and attach to the `otel-tui` container to view the telemetry data:
 `docker attach otel-tui`
 Visit `http://localhost:8080/rolldice` in your browser.
